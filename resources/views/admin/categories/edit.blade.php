@@ -6,7 +6,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0"> Добавление категории</h1>
+                        <h1 class="m-0"> Редактирование категории</h1>
                     </div><!-- /.col -->
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
@@ -24,17 +24,16 @@
             <div class="container-fluid">
                 <!-- Small boxes (Stat box) -->
                 <div class="row">
-                    <form action="{{ route('admin.category.store') }}" method="post" class="col-5">
+                    <form action="#" method="post" class="col-5">
                         @csrf
                         <div class="form-group">
-                            <label>Название категории</label>
                             <input type="text" class="form-control" name="title"
-                                   placeholder="Введите название категории">
+                                   placeholder="Введите название категории" value="{{$category->title}}">
                             @error('title')
                             <div class="text-danger">Поле необходимо заполнить</div>
                             @enderror
                         </div>
-                        <input type="submit" class="btn btn-primary" value="Добавить">
+                        <input type="submit" class="btn btn-primary" value="Обновить">
                     </form>
                 </div>
             </div><!-- /.container-fluid -->
