@@ -6,9 +6,9 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6 d-flex align-items-center">
-                        <h1 class="m-0 mr-4" >{{$category->title}}</h1>
-                        <a href="{{route('admin.category.edit', $category->id)}}" class="text-success"><i class="fas fa-pen-alt"></i></a>
-                        <form action="{{route('admin.category.delete',$category->id)}}" method="post">
+                        <h1 class="m-0 mr-4" >{{$tag->title}}</h1>
+                        <a href="{{route('admin.tag.edit', $tag->id)}}" class="text-success"><i class="fas fa-pen-alt"></i></a>
+                        <form action="{{route('admin.tag.delete',$tag->id)}}" method="post">
                             @csrf
                             @method('DELETE')
                             <button type="submit" role="button" class="border-0 bg-transparent">
@@ -38,11 +38,11 @@
                                     <tbody>
                                         <tr>
                                             <td>ID</td>
-                                            <td>{{$category->id}}</td>
+                                            <td>{{$tag->id}}</td>
                                         </tr>
                                         <tr>
                                             <td>Title</td>
-                                            <td>{{$category->title}}</td>
+                                            <td>{{$tag->title}}</td>
                                         </tr>
                                 </table>
                             </div>
@@ -50,8 +50,8 @@
                     </div>
                 </div>
                 <div class="col-5">
-                    <a href="{{ route('admin.category.create') }}" class="btn btn-block btn-primary">Создать
-                        категорию</a>
+                    <a href="{{ route('admin.tag.create') }}" class="btn btn-block btn-primary">Создать
+                        тэг</a>
                 </div>
             </div>
         </section>

@@ -24,12 +24,12 @@
             <div class="container-fluid">
                 <!-- Small boxes (Stat box) -->
                 <div class="row">
-                    <form action="{{ route('admin.category.store') }}" method="post" class="col-5">
+                    <form action="{{ route('admin.tag.store') }}" method="post" class="col-5">
                         @csrf
                         <div class="form-group">
                             <label>Название категории</label>
                             <input type="text" class="form-control" name="title"
-                                   placeholder="Введите название категории">
+                                   placeholder="Введите название тэга">
                             @error('title')
                             <div class="text-danger">Поле необходимо заполнить</div>
                             @enderror
